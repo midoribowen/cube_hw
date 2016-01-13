@@ -1,0 +1,14 @@
+<p><h3>Your rectangle's length is $myRectangle.getLength()</h3></p>
+<p><h3>Your rectangle's width is $myRectangle.getWidth()</h3></p>
+
+#foreach ($rectangle in $myRectangles)
+  <p><h3>Your rectangle's length is $rectangle.getLength()</h3></p>
+  <p><h3>Your rectangle's width is $rectangle.getWidth()</h3></p>
+  #if ($rectangle.isSquare())
+    <p><h3>Your rectangle is a square!</h3></p>
+    <h5>Surface are of a cube with those dimensions: $myCube.volume()</h5>
+    <h5>Volume of a cube with those dimensions: $myCube.volume()</h5>
+  #else
+    <p><h3>Your rectangle isn't a square!</h3></p>
+  #end
+#end
